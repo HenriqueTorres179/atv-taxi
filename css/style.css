@@ -1,0 +1,80 @@
+/* === fonte === */
+
+html,
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* === header === */
+
+header {
+  text-align: center;
+  font-size: 0.8rem;
+  box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.3);
+}
+
+header .btn-login {
+  color: #fbbc05;
+}
+
+header img {
+  width: 25%;
+  margin: 2vw 0vw;
+}
+
+header .btn-primary {
+  color: #ffffff;
+  background-color: #fbbc05;
+  border-radius: 7px;
+  padding: 1vw;
+  margin-left: 3vw;
+}
+
+header ul {
+  padding-bottom: 3vw;
+}
+
+.btn {
+  padding-bottom: 3vw;
+}
+
+/* === banner === */
+
+.banner {
+  background:
+    url(../images/banner-image.png) no-repeat,
+    linear-gradient(rgba(139, 149, 3255, 0.5)),
+    rgba(139, 149, 3255, 0.5);
+  background-size: auto 100%;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (min-width: 600px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2vw;
+  }
+  header ul {
+    display: flex;
+    gap: 4vw;
+    padding-bottom: 0;
+  }
+  header li {
+    padding: 1vw 0;
+    margin: 1vw 0;
+    font-weight: 500;
+  }
+  header .btn {
+    font-weight: 500;
+    padding-right: 7vw;
+    padding-bottom: 0;
+  }
+  header img {
+    padding: 1vw 0 0 0;
+    margin: 2vw 1vw 2.3vw 0vw;
+    width: 80%;
+  }
+}
