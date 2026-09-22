@@ -1,80 +1,83 @@
 /* === fonte === */
-
 html,
 body {
   font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 /* === header === */
-
 header {
+  box-shadow: 0px 8px 12px -8px rgba(0, 0, 0, 0.3);
   text-align: center;
-  font-size: 0.8rem;
-  box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.3);
+  font-size: 1rem;
+  padding-bottom: 1.5vw;
+  font-weight: 500;
 }
 
-header .btn-login {
+header li {
+  margin: 2vw 0;
+}
+
+.btn-log {
   color: #fbbc05;
 }
 
-header img {
-  width: 25%;
-  margin: 2vw 0vw;
-}
-
-header .btn-primary {
-  color: #ffffff;
+.btn-header {
+  display: inline-block;
+  padding: 2vw;
   background-color: #fbbc05;
-  border-radius: 7px;
-  padding: 1vw;
-  margin-left: 3vw;
-}
-
-header ul {
-  padding-bottom: 3vw;
-}
-
-.btn {
-  padding-bottom: 3vw;
+  color: #ffffff;
+  border-radius: 10px;
 }
 
 /* === banner === */
-
 .banner {
-  background:
-    url(../images/banner-image.png) no-repeat,
-    linear-gradient(rgba(139, 149, 3255, 0.5)),
-    rgba(139, 149, 3255, 0.5);
-  background-size: auto 100%;
+  background: url(../images/banner-image.png) no-repeat center center;
+  background-size: cover;
+  text-align: center;
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
+.banner h1 {
+  color: #252b42;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.banner p {
+  color: #737373;
+  font-weight: 400;
+  font-size: 1.1rem;
+  padding: 1.7vw 0;
+}
+.banner button {
+  background-color: #252b42;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1.3rem;
+}
 
 @media only screen and (min-width: 600px) {
   header {
+    font-size: 1.2rem;
     display: flex;
+    padding-bottom: 0;
     justify-content: space-between;
     align-items: center;
-    gap: 2vw;
+    padding: 0 2vw;
   }
   header ul {
     display: flex;
-    gap: 4vw;
-    padding-bottom: 0;
+    align-items: center;
+    gap: 2vw;
   }
   header li {
-    padding: 1vw 0;
-    margin: 1vw 0;
-    font-weight: 500;
+    margin: 1vw 1vw 1.2vw 1vw;
   }
-  header .btn {
-    font-weight: 500;
-    padding-right: 7vw;
-    padding-bottom: 0;
+  .btn-header {
+    padding: 0.7vw 1.2vw;
   }
   header img {
-    padding: 1vw 0 0 0;
-    margin: 2vw 1vw 2.3vw 0vw;
-    width: 80%;
+    height: 2.5vw;
   }
 }
