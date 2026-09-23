@@ -1,9 +1,15 @@
-/* === fonte === */
+/* === fonte e formatação geral === */
 html,
 body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+section {
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 /* === header === */
@@ -36,6 +42,7 @@ header li {
   background: url(../images/banner-image.png) no-repeat center center;
   background-size: cover;
   text-align: center;
+  padding: 0 5vw;
 }
 
 .banner h1 {
@@ -48,16 +55,41 @@ header li {
   color: #737373;
   font-weight: 400;
   font-size: 1.1rem;
-  padding: 1.7vw 0;
+  padding: 1.7vw 0 6vw 0;
 }
-.banner button {
+.banner .text {
+  text-align: justify;
+}
+.banner .downloads .btn {
   background-color: #252b42;
   color: #ffffff;
-  font-weight: 500;
+  font-weight: 200;
   font-size: 1.3rem;
+  padding: 3vw 5vw;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
 }
-
+.banner .downloads {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4vw;
+}
+.banner .downloads .btn:last-child {
+  margin: 3vw 0.7vw 2vw 0;
+}
+.banner img:last-child {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  transform: translateX(7.5%) !important;
+}
 @media only screen and (min-width: 600px) {
+  /* === header === */
   header {
     font-size: 1.2rem;
     display: flex;
@@ -79,5 +111,38 @@ header li {
   }
   header img {
     height: 2.5vw;
+  }
+  /* === banner === */
+  .banner {
+    display: flex;
+    text-align: justify;
+    align-items: center;
+  }
+  .banner .container-banner {
+    margin-left: 4vw;
+  }
+  .banner h1 {
+    font-size: 2.7rem;
+    line-height: 1.4;
+  }
+  .banner p {
+    font-size: 0.8rem;
+    padding: 1vw 0 3vw 0;
+  }
+  .banner .downloads {
+    flex-direction: row;
+    justify-content: justify;
+    gap: 2vw;
+  }
+  .banner .downloads .btn {
+    padding: 1.5vw 3vw;
+    font-size: 1.2rem;
+  }
+  .banner .downloads .btn:last-child {
+    margin: 0;
+  }
+  .banner img:last-child {
+    width: 42%;
+    height: auto;
   }
 }
