@@ -61,9 +61,6 @@ header li {
   margin: 3vw 0vw 1vw 0vw;
 }
 
-.banner .text {
-  text-align: justify;
-}
 .banner .downloads .btn {
   background-color: #252b42;
   color: #ffffff;
@@ -108,7 +105,7 @@ header li {
 .ready h2 {
   color: #252b42;
   font-size: 2rem;
-  font-weight: 800;
+  font-weight: 900;
   padding: 3vw 0vw 1vw 0vw;
 }
 .ready p {
@@ -123,6 +120,22 @@ header li {
   display: block;
   margin: 0 auto;
 }
+.ready .phones {
+  position: relative;
+  display: inline-block;
+  width: 466px;
+  height: auto;
+}
+.ready .phones::before {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background-color: #ffc107; /* Cor amarela do fundo */
+  border-radius: 50%; 
+  top: 20%;
+  left: -20%;
+  z-index: -2;
 
 @media only screen and (min-width: 600px) {
   main {
@@ -163,7 +176,7 @@ header li {
     align-items: center;
   }
   .banner .container-banner {
-    margin-left: 4vw;
+    margin: 0 20vw 0 4vw;
   }
   .banner h1 {
     font-size: 2.7rem;
@@ -186,7 +199,31 @@ header li {
     margin: 0;
   }
   .banner img:last-child {
-    width: 42%;
+    width: 330px;
     height: auto;
+    margin: auto 0;
+    padding: 4vw 0;
+  }
+
+  /* === Ready === */
+  .ready h2 {
+    font-size: 3rem;
+  }
+  .ready .container-ready {
+    display: flex;
+  }
+  .ready .features {
+    display: flex;
+  }
+  .ready .card-features {
+    display: flex;
+    flex-direction: column;
+  }
+  .ready .background-cards {
+    width: 50px;
+    height: auto;
+  }
+  .ready p {
+    font-size: 1.1rem;
   }
 }
