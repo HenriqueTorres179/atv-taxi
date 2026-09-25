@@ -85,9 +85,9 @@ header li {
 .banner img:last-child {
   display: block;
   margin: 0 auto;
+  width: 13rem;
   max-width: 100%;
   height: auto;
-  transform: translateX(7.5%) !important;
 }
 .banner .phone {
   width: 350px;
@@ -112,31 +112,30 @@ header li {
   color: #737373;
   font-weight: 400;
   font-size: 0.8rem;
-  margin: 2vw;
-}
-.ready img {
-  width: 250px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
+  margin: 2vw 2vw 10vw 2vw;
 }
 .ready .phones {
+  width: 100%;
+}
+.ready .phones img {
   position: relative;
   display: inline-block;
-  width: 466px;
-  height: auto;
+  width: 30%;
+  margin: 0 auto;
 }
 .ready .phones::before {
   content: "";
   position: absolute;
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  max-width: 320px;
+  height: auto;
   background-color: #ffc107;
   border-radius: 50%;
   top: 20%;
   left: -20%;
   z-index: -2;
 }
+
 @media only screen and (min-width: 600px) {
   main {
     padding-top: 95.24px;
