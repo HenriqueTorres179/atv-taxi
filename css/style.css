@@ -131,12 +131,12 @@ header li {
   position: absolute;
   width: 250px;
   height: 250px;
-  background-color: #ffc107; /* Cor amarela do fundo */
-  border-radius: 50%; 
+  background-color: #ffc107;
+  border-radius: 50%;
   top: 20%;
   left: -20%;
   z-index: -2;
-
+}
 @media only screen and (min-width: 600px) {
   main {
     padding-top: 95.24px;
@@ -188,7 +188,7 @@ header li {
   }
   .banner .downloads {
     flex-direction: row;
-    justify-content: justify;
+    justify-content: space-around;
     gap: 2vw;
   }
   .banner .downloads .btn {
@@ -210,20 +210,24 @@ header li {
     font-size: 3rem;
   }
   .ready .container-ready {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
   .ready .features {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: start;
+    text-align: left;
   }
-  .ready .card-features {
-    display: flex;
-    flex-direction: column;
-  }
-  .ready .background-cards {
-    width: 50px;
-    height: auto;
-  }
-  .ready p {
-    font-size: 1.1rem;
-  }
+}
+.ready .card-features {
+  display: flex;
+  flex-direction: column;
+}
+.ready .background-cards {
+  width: 50px;
+  height: auto;
+}
+.ready p {
+  font-size: 1.1rem;
 }
