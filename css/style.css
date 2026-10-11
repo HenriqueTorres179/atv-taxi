@@ -1,7 +1,7 @@
 /* === fonte e formatação geral === */
 html,
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -104,36 +104,337 @@ header li {
 }
 .ready h2 {
   color: #252b42;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 900;
   padding: 3vw 0vw 1vw 0vw;
+}
+.ready h3 {
+  color: #252b42;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 1vw 0vw 1vw 0vw;
 }
 .ready p {
   color: #737373;
   font-weight: 400;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   margin: 2vw 2vw 10vw 2vw;
 }
+.ready .features .background-cards {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  padding: 6vw;
+  margin: 2vw;
+  background-color: #e1f4ff;
+  border-radius: 10px;
+}
+.ready .features img {
+  display: block;
+  width: 12vw;
+  height: auto;
+}
 .ready .phones {
+  position: relative;
   width: 100%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+.ready .phones::before {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background-color: #ffc107;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
 }
 .ready .phones img {
   position: relative;
-  display: inline-block;
-  width: 30%;
-  margin: 0 auto;
-}
-.ready .phones::before {
-  content: "";
-  position: absolute;
-  width: 300px;
-  max-width: 320px;
+  width: 165px;
   height: auto;
-  background-color: #ffc107;
-  border-radius: 50%;
-  top: 20%;
-  left: -20%;
-  z-index: -2;
+  top: 160px;
+  left: 40%;
+  transform: translate(-50%, -50%) rotate(-3deg);
+  z-index: 2;
+  padding: 20vw 0;
+}
+.ready .phones::after {
+  content: '';
+  position: absolute;
+  width: 145px;
+  height: 280px;
+  background-image: url(../images/iphone.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  top: 57%;
+  left: 20%;
+  transform: translate(-50%, -50%) rotate(-23deg);
+  z-index: 1;
+}
+
+/* === Download === */
+.download {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  margin: 8vw 5vw;
+  padding: 10vw 6vw 0;
+  border-radius: 20px;
+  background-color: #fbbc05;
+}
+.download h2 {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 0 3vw 0;
+}
+.download p {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0 0 6vw 0;
+}
+.download .btn-download {
+  display: inline-block;
+  background-color: #252b42;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 3vw 8vw;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.download .phones-download {
+  position: relative;
+  width: 100%;
+  height: 75vw;
+  margin-top: 8vw;
+}
+.download .phones-download img {
+  position: absolute;
+  height: auto;
+}
+.download .phone-front {
+  width: 40vw;
+  left: 8vw;
+  bottom: -8vw;
+}
+.download .phone-back {
+  width: 30vw;
+  right: 2vw;
+  top: 2vw;
+}
+
+/* === Services === */
+.services {
+  padding: 8vw 5vw;
+}
+.services .services-intro {
+  margin-bottom: 6vw;
+}
+.services .services-intro h2 {
+  color: #252b42;
+  font-size: 1.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 0 2vw 0;
+}
+.services .services-intro p {
+  color: #737373;
+  font-size: 0.9rem;
+  margin: 0;
+}
+.services .cards-services {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4vw;
+}
+.services .card-service {
+  position: relative;
+  padding: 8vw 6vw;
+  background-color: #f3f7fc;
+  border-radius: 6px;
+}
+.services .card-service.active {
+  background-color: #fbbc05;
+}
+.services .icon-service {
+  display: block;
+  width: 14vw;
+  height: auto;
+  margin-bottom: 8vw;
+}
+.services .icon-arrow {
+  position: absolute;
+  top: 8vw;
+  right: 6vw;
+  width: 7vw;
+  height: auto;
+}
+.services .card-service h3 {
+  color: #252b42;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 3vw 0;
+}
+.services .card-service p {
+  color: #737373;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  margin: 0;
+}
+.services .card-service.active p {
+  color: #252b42;
+}
+
+/* === Contact === */
+.contact {
+  padding: 8vw 5vw;
+}
+.contact .contact-header {
+  text-align: center;
+  max-width: 90%;
+  margin: 0 auto 8vw auto;
+}
+.contact .contact-header h2 {
+  color: #252b42;
+  font-size: 1.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 0 2vw 0;
+}
+.contact .contact-header p {
+  color: #737373;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+}
+.contact .contact-body {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8vw;
+}
+.contact .contact-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5vw;
+}
+.contact .contact-form input,
+.contact .contact-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 3vw 0;
+  border: none;
+  border-bottom: 1px solid #f2c867;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: #252b42;
+  outline: none;
+}
+.contact .contact-form input::placeholder,
+.contact .contact-form textarea::placeholder {
+  color: #252b42;
+  font-weight: 600;
+}
+.contact .contact-form input:focus,
+.contact .contact-form textarea:focus {
+  border-bottom: 2px solid #fbbc05;
+}
+.contact .contact-form textarea {
+  height: 30vw;
+  resize: none;
+}
+.contact .btn-send {
+  justify-self: start;
+  background-color: #fbbc05;
+  color: #252b42;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  padding: 3vw 8vw;
+  cursor: pointer;
+}
+.contact .contact-map img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* === Footer === */
+.site-footer {
+  margin-top: 8vw;
+}
+.site-footer .footer-top {
+  display: flex;
+  flex-direction: column;
+  gap: 8vw;
+  padding: 0 8vw 10vw 8vw;
+}
+.site-footer .logo-footer {
+  display: block;
+  width: 30vw;
+  height: auto;
+  margin-bottom: 3vw;
+}
+.site-footer .footer-brand p {
+  color: #737373;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  max-width: 70vw;
+  margin: 0 0 4vw 0;
+}
+.site-footer .socials {
+  display: flex;
+  gap: 4vw;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.site-footer .socials img {
+  display: block;
+  width: 6vw;
+  height: auto;
+}
+.site-footer .footer-links h4 {
+  color: #252b42;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 4vw 0;
+}
+.site-footer .footer-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.site-footer .footer-links li {
+  margin: 0 0 3vw 0;
+}
+.site-footer .footer-links a {
+  color: #737373;
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+.site-footer .footer-bottom {
+  background-color: #e1f4ff;
+  text-align: center;
+  padding: 5vw;
+}
+.site-footer .footer-bottom p {
+  color: #737373;
+  font-size: 0.8rem;
+  margin: 0;
 }
 
 @media only screen and (min-width: 600px) {
@@ -205,9 +506,33 @@ header li {
   }
 
   /* === Ready === */
+
   .ready h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    padding: 0;
   }
+  .ready h3 {
+    font-size: 1rem;
+    padding: 0;
+  }
+  .ready p {
+    font-size: 0.8rem;
+    margin: 1vw 0 5vw 0;
+  }
+  .ready .features .background-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    margin: 0 0 1vw 0;
+  }
+  .ready .features img {
+    width: 25px;
+    height: auto;
+  }
+
   .ready .container-ready {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -218,15 +543,232 @@ header li {
     justify-items: start;
     text-align: left;
   }
-}
-.ready .card-features {
-  display: flex;
-  flex-direction: column;
-}
-.ready .background-cards {
-  width: 50px;
-  height: auto;
-}
-.ready p {
-  font-size: 1.1rem;
+
+  .ready .card-features {
+    display: flex;
+    flex-direction: column;
+  }
+  .ready .background-cards {
+    width: 50px;
+    height: auto;
+  }
+  .ready .phones {
+    position: relative;
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  .ready .phones::before {
+    content: '';
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    background-color: #ffc107;
+    border-radius: 50%;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+  }
+  .ready .phones img {
+    position: relative;
+    width: 150px;
+    height: auto;
+    top: 18%;
+    left: 23%;
+    transform: translate(-50%, -50%) rotate(-3deg);
+    z-index: 2;
+    padding: 0;
+  }
+  .ready .phones::after {
+    content: '';
+    position: absolute;
+    width: 128px;
+    height: 255px;
+    background-image: url(../images/iphone.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    top: 57%;
+    left: 28.5%;
+    transform: translate(-50%, -50%) rotate(-25deg);
+    z-index: 1;
+  }
+
+  /* === Download === */
+  .download {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    text-align: left;
+    min-height: 30vw;
+    margin: 5vw 8vw;
+    padding: 0 0 0 6vw;
+  }
+  .download .container-download {
+    align-self: center;
+    max-width: 40%;
+    padding: 4vw 0;
+  }
+  .download h2 {
+    font-size: 2.2rem;
+    margin: 0 0 1.5vw 0;
+  }
+  .download p {
+    font-size: 0.8rem;
+    margin: 0 0 3vw 0;
+  }
+  .download .btn-download {
+    font-size: 0.9rem;
+    padding: 1vw 2.5vw;
+  }
+  .download .phones-download {
+    width: 50%;
+    height: auto;
+    margin-top: 0;
+  }
+  .download .phone-front {
+    width: 16vw;
+    left: 8vw;
+    bottom: -2vw;
+  }
+  .download .phone-back {
+    width: 13vw;
+    right: 3vw;
+    top: -3vw;
+  }
+
+  /* === Services === */
+  .services {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4vw;
+    align-items: start;
+    padding: 5vw 8vw;
+  }
+  .services .services-intro {
+    margin: 0;
+  }
+  .services .services-intro h2 {
+    font-size: 1.6rem;
+    margin: 0 0 1vw 0;
+  }
+  .services .services-intro p {
+    font-size: 0.8rem;
+  }
+  .services .cards-services {
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+  .services .card-service {
+    padding: 2.5vw;
+    border-radius: 0;
+  }
+  .services .icon-service {
+    width: 4.5vw;
+    margin-bottom: 4vw;
+  }
+  .services .icon-arrow {
+    top: 2.5vw;
+    right: 2.5vw;
+    width: 2vw;
+  }
+  .services .card-service h3 {
+    font-size: 1.1rem;
+    margin: 0 0 1vw 0;
+  }
+  .services .card-service p {
+    font-size: 0.75rem;
+  }
+
+  /* === Contact === */
+  .contact {
+    padding: 5vw 8vw;
+  }
+  .contact .contact-header {
+    max-width: 45%;
+    margin: 0 auto 4vw auto;
+  }
+  .contact .contact-header h2 {
+    font-size: 1.8rem;
+    margin: 0 0 1vw 0;
+  }
+  .contact .contact-header p {
+    font-size: 0.8rem;
+  }
+  .contact .contact-body {
+    grid-template-columns: 1.3fr 1fr;
+    gap: 3vw;
+  }
+  .contact .contact-form {
+    grid-template-columns: 1fr 1fr;
+    gap: 2vw 3vw;
+    align-content: start;
+  }
+  .contact .contact-form input,
+  .contact .contact-form textarea {
+    padding: 1.2vw 0;
+    font-size: 0.8rem;
+  }
+  .contact .contact-form .field-full {
+    grid-column: 1 / -1;
+  }
+  .contact .contact-form textarea {
+    height: 12vw;
+  }
+  .contact .btn-send {
+    font-size: 0.8rem;
+    padding: 1vw 2.5vw;
+  }
+  .contact .contact-map {
+    height: 100%;
+  }
+  .contact .contact-map img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* === Footer === */
+  .site-footer {
+    margin-top: 5vw;
+  }
+  .site-footer .footer-top {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 4vw;
+    padding: 4vw 10vw 6vw 10vw;
+  }
+  .site-footer .logo-footer {
+    width: 8vw;
+    margin-bottom: 1.5vw;
+  }
+  .site-footer .footer-brand p {
+    font-size: 0.75rem;
+    max-width: 25vw;
+    margin: 0 0 1.5vw 0;
+  }
+  .site-footer .socials {
+    gap: 1.2vw;
+  }
+  .site-footer .socials img {
+    width: 1.6vw;
+  }
+  .site-footer .footer-links h4 {
+    font-size: 0.95rem;
+    margin: 0 0 1.5vw 0;
+  }
+  .site-footer .footer-links li {
+    margin: 0 0 1vw 0;
+  }
+  .site-footer .footer-links a {
+    font-size: 0.75rem;
+  }
+  .site-footer .footer-bottom {
+    padding: 1.5vw;
+  }
+  .site-footer .footer-bottom p {
+    font-size: 0.75rem;
+  }
 }
