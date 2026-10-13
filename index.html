@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Taxi</title>
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="src/css/reset.css" />
+    <link rel="stylesheet" href="src/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,20 +16,37 @@
 
   <body>
     <header>
-      <ul>
-        <li>
-          <a href="#"><img src="images/Logo.png" alt="logo-GlideApp" /></a>
-        </li>
-        <li><a href="#">Products</a></li>
-        <li><a href="#">Business Solutions</a></li>
-        <li><a href="#">Help Center</a></li>
-        <li><a href="#">Pricing</a></li>
-      </ul>
-      <ul>
-        <li><a href="#" class="btn-log">Log In</a></li>
-        <li><a href="#" class="btn-header">Get Started</a></li>
-      </ul>
+      <div class="header-top">
+        <a href="#">
+          <img src="src/assets/images/Logo.png" alt="logo-GlideApp" />
+        </a>
+
+        <button
+          class="menu-toggle"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Business Solutions</a></li>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Pricing</a></li>
+        </ul>
+
+        <ul>
+          <li><a href="#" class="btn-log">Log In</a></li>
+          <li><a href="#" class="btn-header">Get Started</a></li>
+        </ul>
+      </nav>
     </header>
+
     <main>
       <section class="banner">
         <div class="container-banner">
@@ -44,16 +61,19 @@
 
           <div class="downloads">
             <button class="btn">
-              <img src="images/icon-play.png" alt="Google Play" />
+              <img src="src/assets/images/icon-play.png" alt="Google Play" />
               <span>Google Play</span>
             </button>
             <button class="btn">
-              <img src="images/icn svg-icn icn-lg.png" alt="App Store" />
+              <img
+                src="src/assets/images/icn svg-icn icn-lg.png"
+                alt="App Store"
+              />
               <span>App Store</span>
             </button>
           </div>
         </div>
-        <img src="images/iphone.png" alt="Iphone" class="phone" />
+        <img src="src/assets/images/iphone.png" alt="Iphone" class="phone" />
       </section>
       <section class="ready">
         <h2>Ready to Ride?</h2>
@@ -64,26 +84,32 @@
         </p>
         <div class="container-ready">
           <div class="phones">
-            <img src="images/iphone.png" alt="Iphone" />
+            <img src="src/assets/images/iphone.png" alt="Iphone" />
           </div>
           <ul class="features">
             <li class="card-features">
               <div class="background-cards">
-                <img src="images/icon-mail-tracking.png" alt="email-icon" />
+                <img
+                  src="src/assets/images/icon-mail-tracking.png"
+                  alt="email-icon"
+                />
               </div>
               <h3>Real-time Tracking</h3>
               <p>Track your ride's progress in real-time.</p>
             </li>
             <li class="card-features">
               <div class="background-cards">
-                <img src="images/icon-payments.png" alt="payments-icon" />
+                <img
+                  src="src/assets/images/icon-payments.png"
+                  alt="payments-icon"
+                />
               </div>
               <h3>Secure Payments</h3>
               <p>Safe and seamless payment options.</p>
             </li>
             <li class="card-features">
               <div class="background-cards">
-                <img src="images/icon-car.png" alt="car-icon" />
+                <img src="src/assets/images/icon-car.png" alt="car-icon" />
               </div>
               <h3>Ride Options</h3>
               <p>Choose from various ride types for your convenience.</p>
@@ -101,8 +127,16 @@
           <a href="#" class="btn-download">Get Started</a>
         </div>
         <div class="phones-download">
-          <img src="images/iphone.png" alt="Iphone" class="phone-back" />
-          <img src="images/iphone.png" alt="Iphone" class="phone-front" />
+          <img
+            src="src/assets/images/iphone.png"
+            alt="Iphone"
+            class="phone-back"
+          />
+          <img
+            src="src/assets/images/iphone.png"
+            alt="Iphone"
+            class="phone-front"
+          />
         </div>
       </section>
 
@@ -113,8 +147,16 @@
         </div>
         <div class="cards-services">
           <article class="card-service active">
-            <img src="images/branding.png" alt="" class="icon-service" />
-            <img src="images/arrow.png" alt="Arrow" class="icon-arrow" />
+            <img
+              src="src/assets/images/branding.png"
+              alt=""
+              class="icon-service"
+            />
+            <img
+              src="src/assets/images/arrow.png"
+              alt="Arrow"
+              class="icon-arrow"
+            />
             <h3>Branding</h3>
             <p>
               I create efficient, adaptable, and engaging websites. No
@@ -125,7 +167,7 @@
           </article>
           <article class="card-service">
             <img
-              src="images/design.png"
+              src="src/assets/images/design.png"
               alt="icon-design"
               class="icon-service"
             />
@@ -139,7 +181,7 @@
           </article>
           <article class="card-service">
             <img
-              src="images/development.png"
+              src="src/assets/images/development.png"
               alt="icon-development"
               class="icon-service"
             />
@@ -153,7 +195,7 @@
           </article>
           <article class="card-service">
             <img
-              src="images/artDirection.png"
+              src="src/assets/images/artDirection.png"
               alt="icon-art-direction"
               class="icon-service"
             />
@@ -211,7 +253,7 @@
             <button type="submit" class="btn-send">Send</button>
           </form>
           <div class="contact-map">
-            <img src="images/map.png" alt="Mapa" />
+            <img src="src/assets/images/map.png" alt="Mapa" />
           </div>
         </div>
       </section>
@@ -222,13 +264,19 @@
           <p>the quick fox jumps over the lazy dogd.</p>
           <ul class="socials">
             <li>
-              <a href="#"><img src="images/facebook.png" alt="Facebook" /></a>
+              <a href="#"
+                ><img src="src/assets/images/facebook.png" alt="Facebook"
+              /></a>
             </li>
             <li>
-              <a href="#"><img src="images/instagram.png" alt="Instagram" /></a>
+              <a href="#"
+                ><img src="src/assets/images/instagram.png" alt="Instagram"
+              /></a>
             </li>
             <li>
-              <a href="#"><img src="images/twitter.png" alt="Twitter" /></a>
+              <a href="#"
+                ><img src="src/assets/images/twitter.png" alt="Twitter"
+              /></a>
             </li>
           </ul>
         </div>
@@ -247,4 +295,5 @@
       </div>
     </footer>
   </body>
+  <script src="src/js/script.js"></script>
 </html>
